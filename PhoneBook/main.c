@@ -3,8 +3,6 @@
 #include <stdlib.h>
 #include <conio.h>
 
-// Todo :: Search Range Remove , Remove , 
-
 typedef struct USERDATA
 {
 	int age;
@@ -95,11 +93,6 @@ void SortListByAge()
 	}
 }
 
-void** SearchByAgeRange(int min_age, int max_age, int* cnt)
-{
-
-}
-
 // UI Code
 typedef enum MY_MENU
 {
@@ -176,16 +169,6 @@ void SearchByAgeIndex()
 	
 	SortListByAge();
 
-	PrintList();
-	void** pResult = SearchByAgeRange(min_age, max_age, &cnt);
-	USERDATA* pTmp = NULL;
-	for (int i = 0; i < cnt; ++i)
-	{
-		pTmp = (USERDATA*)pResult[i];
-		printf("%d, %s, %s\n", pTmp->age, pTmp->name, pTmp->phone);
-	}
-	
-	free(pResult);
 	_getch();
 }
 
